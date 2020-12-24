@@ -11,18 +11,18 @@ namespace Ejercicio_5
 
             try
             {
-                // Utilizo Compare para que aunque se escriba con mayus o minusuclas los dias, es igualmente identificado
-                if (String.Compare( Dia, "lunes", true)== 0 || 
-                    String.Compare( Dia, "martes", true) == 0 ||
-                    String.Compare( Dia, "miercoles", true) == 0 ||
-                    String.Compare( Dia, "jueves", true) == 0 ||
-                    String.Compare( Dia, "viernes", true) == 0)
+                // Utilizo Equals para que aunque se escriba con mayus o minusuclas los dias, es igualmente identificado
+                if (String.Equals( Dia, "lunes", StringComparison.CurrentCultureIgnoreCase) || 
+                    String.Equals( Dia, "martes", StringComparison.CurrentCultureIgnoreCase) ||
+                    String.Equals( Dia, "miercoles", StringComparison.CurrentCultureIgnoreCase) ||
+                    String.Equals( Dia, "jueves", StringComparison.CurrentCultureIgnoreCase) ||
+                    String.Equals( Dia, "viernes", StringComparison.CurrentCultureIgnoreCase))
                 {
                     Console.WriteLine("No es fin de semana");
 
             }   
-                else if(String.Compare(Dia, "sabado", true)== 0 ||
-                    String.Compare(Dia, "domingo", true)==0)
+                else if(String.Equals(Dia, "sabado", StringComparison.CurrentCultureIgnoreCase) ||
+                    String.Equals(Dia, "domingo", StringComparison.CurrentCultureIgnoreCase))
                 {
                     Console.WriteLine("Es fin de semana");
                 }
@@ -31,6 +31,7 @@ namespace Ejercicio_5
                     Console.WriteLine("No es un dia");
                 }
             }
+            
             catch (Exception e)
             {
                 Console.WriteLine(e.Message);
