@@ -9,9 +9,9 @@ namespace Ejercicio_9
 
             for (int i = 0; i <= 100; i++)
             {
-                if (i%2 != 0)
+                if (i%2 == 0)
                 {
-                    Console.WriteLine("Este numero es Impar, {0}",i);
+                    Console.WriteLine("Este numero es par, {0}",i);
                 }
 
             }
