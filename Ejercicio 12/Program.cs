@@ -6,8 +6,7 @@ namespace Ejercicio_12
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Introduzca su nombre");
-            String Nombre = Console.ReadLine();
+            String Nombre = "Fernando";
 
             Console.WriteLine("Bienvenido {0}",Nombre);
         }
